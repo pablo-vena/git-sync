@@ -34,9 +34,9 @@ if [[ -n "$SOURCE_SSH_PRIVATE_KEY" ]]; then
 else
   git clone "$SOURCE_REPO" /root/source --origin source && cd /root/source
 fi
-
+echo "vamoo"
 git remote add destination "$DESTINATION_REPO"
-
+echo "vamoo2"
 # Pull all branches references down locally so subsequent commands can see them
 git fetch source '+refs/heads/*:refs/heads/*' --update-head-ok
 
